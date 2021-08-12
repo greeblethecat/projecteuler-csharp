@@ -3,6 +3,12 @@ public class Solution {
 }
 
 public static class Utils {
-  public static void Foo() {
+  public static bool isPalindrome(string s) {
+    for (int i = 0; i < s.Length/2; i++) {
+      if (s[i]!=s[s.Length-i-1]) {
+        return false;
+      }
+    }
+    return true;
   }
 }

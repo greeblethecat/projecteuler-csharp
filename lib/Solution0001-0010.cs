@@ -52,6 +52,15 @@ public class Solution0003 : Solution {
 
 public class Solution0004 : Solution {
   public override string run() {
-    return base.run();
+    int answer = 0;
+    for (int a = 100; a <= 999; a++) {
+      for (int b = a; b <= 999; b++) {
+        var p = a * b;
+        if (Utils.isPalindrome(p.ToString())) {
+          if (p > answer) { answer = p; }
+        }
+      }
+    }
+    return answer.ToString();
   }
 }
