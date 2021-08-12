@@ -84,3 +84,18 @@ public class Solution5 : Solution {
     return answer.ToString();
   }
 }
+
+public class Solution6 : Solution {
+  public override string run() {
+    long answer = 0;
+    long limit = 100;
+    long sumOfSquares = 0, squareOfSum = 0;
+    for (int i = 1; i <= limit; i++) {
+      sumOfSquares += i*i;
+      squareOfSum += i;
+    }
+    squareOfSum *= squareOfSum;
+    answer = squareOfSum - sumOfSquares;
+    return answer.ToString();
+  }
+}
